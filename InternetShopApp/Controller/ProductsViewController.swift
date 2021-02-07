@@ -70,6 +70,8 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier, for: indexPath) as! ProductTableViewCell
         let product = productArray[indexPath.row]
         
+        cell.product = product
+        
         if let productImage = product.image {
             cell.productImageView.image = UIImage(named: productImage)
         }
@@ -97,6 +99,8 @@ extension ProductsViewController: UICollectionViewDelegateFlowLayout, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.identifier, for: indexPath) as! ProductCollectionViewCell
         let product = productArray[indexPath.item]
+        
+        cell.product = product
         
         if let productImage = product.image {
             cell.productImageView.image = UIImage(named: productImage)

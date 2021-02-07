@@ -1,18 +1,16 @@
 //
-//  ProductTableViewCell.swift
+//  ShoppingCartItemTableViewCell.swift
 //  InternetShopApp
 //
-//  Created by Чингиз Азимбаев on 04.02.2021.
+//  Created by Чингиз Азимбаев on 07.02.2021.
 //
 
 import UIKit
 
-class ProductTableViewCell: UITableViewCell {
-    
-    static let identifier = String(describing: ProductTableViewCell.self)
+class ShoppingCartItemTableViewCell: UITableViewCell {
+
+    static let identifier = String(describing: ShoppingCartItemTableViewCell.self)
     static let nib = UINib(nibName: identifier, bundle: nil)
-    
-    var product: Product?
     
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var productTitleLabel: UILabel!
@@ -25,12 +23,5 @@ class ProductTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-    }
-    
-    @IBAction func addAction(_ sender: Any) {
-        guard let unwrappedProduct = product else {
-            return
-        }
-        ShoppingCart.shared.addProduct(product: unwrappedProduct)
     }
 }

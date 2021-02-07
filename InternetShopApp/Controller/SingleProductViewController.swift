@@ -35,4 +35,11 @@ class SingleProductViewController: UIViewController {
         productPriceLabel.text = "\(product.price ?? 0.0)$"
         productDescriptionLabel.text = product.description
     }
+    
+    @IBAction func addAction(_ sender: Any) {
+        guard let unwrappedProduct = selectedProduct else {
+            return
+        }
+        ShoppingCart.shared.addProduct(product: unwrappedProduct)
+    }
 }

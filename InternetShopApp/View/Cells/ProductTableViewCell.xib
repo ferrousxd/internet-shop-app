@@ -27,6 +27,9 @@
                         <rect key="frame" x="280" y="36.5" width="30" height="27"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <state key="normal" title="Add"/>
+                        <connections>
+                            <action selector="addAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="rt5-o1-hfk"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dfe-78-KSz">
                         <rect key="frame" x="98" y="10" width="21.5" height="12"/>
